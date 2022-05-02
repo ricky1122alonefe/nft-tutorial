@@ -67,9 +67,9 @@ impl Contract {
         Self::new(
             owner_id,
             NFTContractMetadata {
-                spec: "nft-1.0.0".to_string(),
-                name: "NFT Tutorial Contract".to_string(),
-                symbol: "GOTEAM".to_string(),
+                spec: "just a test".to_string(),
+                name: "NFTSSSSSS".to_string(),
+                symbol: "GOROOTTING".to_string(),
                 icon: None,
                 base_uri: None,
                 reference: None,
