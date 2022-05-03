@@ -1,0 +1,1 @@
+near call $NFT_CONTRACT_ID nft_mint '{"token_id": "M11111YPPMCLOUD", "metadata": {"title": "RAW", "description": "BEST TEAM IN THE WORLD)", "media": "https://bafkreig4fp42vdu6jeeanqu6b5nughmxfwgfoljtzltv2lxzzoz6qzhgji.ipfs.nftstorage.link/"}, "receiver_id": "'$NFT_CONTRACT_ID'"}' --accountId $NFT_CONTRACT_ID --amount 0.1
