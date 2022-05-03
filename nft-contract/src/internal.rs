@@ -60,18 +60,8 @@ impl Contract {
         //we insert that set for the given account ID. 
         self.tokens_per_owner.insert(account_id, &tokens_set);
     }
-} 
 
-//used to make sure the user attached exactly 1 yoctoNEAR
-pub(crate) fn assert_one_yocto() {
-    assert_eq!(
-        env::attached_deposit(),
-        1,
-        "Requires attached deposit of exactly 1 yoctoNEAR",
-    )
-}
-
-  //transfers the NFT to the receiver_id (internal method and can't be called directly via CLI).
+      //transfers the NFT to the receiver_id (internal method and can't be called directly via CLI).
   pub(crate) fn internal_transfer(
     &mut self,
     sender_id: &AccountId,
@@ -113,7 +103,6 @@ if sender_id != &token.owner_id {
     token
 }
 
-//remove a token from an owner (internal method and can't be called directly via CLI).
 pub(crate) fn internal_remove_token_from_owner(
     &mut self,
     account_id: &AccountId,
@@ -137,3 +126,18 @@ pub(crate) fn internal_remove_token_from_owner(
         self.tokens_per_owner.insert(account_id, &tokens_set);
     }
 }
+} 
+
+//used to make sure the user attached exactly 1 yoctoNEAR
+pub(crate) fn assert_one_yocto() {
+    assert_eq!(
+        env::attached_deposit(),
+        1,
+        "Requires attached deposit of exactly 1 yoctoNEAR",
+    )
+}
+
+  //transfers the NFT to the receiver_id (internal method and can't be called directly via CLI).
+  
+
+//remove a token from an owner (internal method and can't be called directly via CLI).
